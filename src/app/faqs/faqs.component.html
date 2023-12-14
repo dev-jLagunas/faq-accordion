@@ -1,1 +1,97 @@
-<p>faqs works!</p>
+<section class="wrapper">
+  <main class="faqs-container">
+    <header class="title-container">
+      <h2 class="title">
+        <img
+          src="/assets/icons/icon-star.svg"
+          alt="star-icon"
+          class="star-icon"
+        />
+        FAQS
+      </h2>
+    </header>
+    <div class="faq-item">
+      <div class="question">
+        <p class="question-title">
+          What is Frontend Mentor, and how will it help me?
+        </p>
+        <button class="accordion-button" (click)="onClick(0)">
+          @if (!isAnswerVisible[0]) {
+          <span class="icon">
+            <img src="/assets/icons/icon-plus.svg" alt="" /> </span
+          >} @else if (isAnswerVisible[0]) {
+          <span class="icon">
+            <img src="/assets/icons/icon-minus.svg" alt="" /> </span
+          >}
+        </button>
+      </div>
+      <p class="answer" [ngClass]="{ 'answer-display': activeQuestion === 0 }">
+        Frontend Mentor offers realistic coding challenges to help developers
+        improve their frontend coding skills with projects in HTML, CSS, and
+        JavaScript. It's suitable for all levels and ideal for portfolio
+        building.
+      </p>
+    </div>
+    <div class="faq-item">
+      <div class="question">
+        <p class="question-title">Is Frontend Mentor really free?</p>
+        <button class="accordion-button" (click)="onClick(1)">
+          @if (!isAnswerVisible[1]) {
+          <span class="icon">
+            <img src="/assets/icons/icon-plus.svg" alt="" /> </span
+          >} @else if (isAnswerVisible[1]) {
+          <span class="icon">
+            <img src="/assets/icons/icon-minus.svg" alt="" /> </span
+          >}
+        </button>
+      </div>
+      <p class="answer" [ngClass]="{ 'answer-display': activeQuestion === 1 }">
+        Yes, Frontend Mentor offers both free and premium coding challenges,
+        with the free option providing access to a range of projects suitable
+        for all skill levels.
+      </p>
+    </div>
+    <div class="faq-item">
+      <div class="question">
+        <p class="question-title">
+          Can I use Frontend Mentor projects in my portfolio?
+        </p>
+        <button class="accordion-button" (click)="onClick(2)">
+          @if (!isAnswerVisible[2]) {
+          <span class="icon">
+            <img src="/assets/icons/icon-plus.svg" alt="" /> </span
+          >} @else if (isAnswerVisible[2]) {
+          <span class="icon">
+            <img src="/assets/icons/icon-minus.svg" alt="" /> </span
+          >}
+        </button>
+      </div>
+      <p class="answer" [ngClass]="{ 'answer-display': activeQuestion === 2 }">
+        Yes, you can use projects completed on Frontend Mentor in your
+        portfolio. It's an excellent way to showcase your skills to potential
+        employers!
+      </p>
+    </div>
+    <div class="faq-item">
+      <div class="question">
+        <p class="question-title">
+          How can I get help if I'm stuck on a Frontend Mentor challenge?
+        </p>
+        <button class="accordion-button" (click)="onClick(3)">
+          @if (!isAnswerVisible[3]) {
+          <span class="icon">
+            <img src="/assets/icons/icon-plus.svg" alt="" /> </span
+          >} @else if (isAnswerVisible[3]) {
+          <span class="icon">
+            <img src="/assets/icons/icon-minus.svg" alt="" /> </span
+          >}
+        </button>
+      </div>
+      <p class="answer" [ngClass]="{ 'answer-display': activeQuestion === 3 }">
+        The best place to get help is inside Frontend Mentor's Discord
+        community. There's a help channel where you can ask questions and seek
+        support from other community members.
+      </p>
+    </div>
+  </main>
+</section>

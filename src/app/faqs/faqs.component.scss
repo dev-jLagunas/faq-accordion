@@ -1,0 +1,115 @@
+// Variables
+$white: hsl(0, 0%, 100%);
+$lightPink: hsl(275, 100%, 97%);
+$grayishPurple: hsl(292, 16%, 49%);
+$darkPurple: hsl(292, 42%, 14%);
+$fontSize: 16px;
+
+// Styles
+
+.wrapper {
+  position: relative;
+  height: 100vh;
+  background-color: $lightPink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 34%;
+    background-image: url("/assets/bg-patterns/background-pattern-mobile.svg");
+    background-size: cover;
+    z-index: 0;
+  }
+
+  @media screen and (min-width: 640px) {
+    &::after {
+      background-image: url("/assets/bg-patterns/background-pattern-desktop.svg");
+    }
+  }
+}
+
+.faqs-container {
+  position: relative;
+  z-index: 1;
+  background-color: $white;
+  height: max-content;
+  width: 90%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  @media screen and (min-width: 640px) {
+    width: clamp(500px, 90%, 700px);
+  }
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(146, 122, 162, 0.2);
+  width: 90%;
+  margin-inline: auto;
+}
+
+.title-container {
+  margin-left: 2rem;
+}
+
+.title {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: row;
+  font-size: 2rem;
+  font-weight: extra-bold;
+}
+
+.star-icon {
+  margin-right: 10px;
+}
+
+.question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10px;
+  padding-bottom: 20px;
+  margin-top: 2rem;
+}
+
+.question-title {
+  color: $darkPurple;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.accordion-button {
+  background-color: transparent;
+  border: none;
+  margin-left: 2rem;
+}
+
+.accordion-button:hover {
+  cursor: pointer;
+}
+
+.answer {
+  color: $grayishPurple;
+  padding-inline: 10px;
+  display: none;
+}
+
+.answer-display {
+  display: block;
+  padding-bottom: 2rem;
+}
